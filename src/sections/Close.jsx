@@ -49,22 +49,13 @@ export function Offer() {
 const FAQ = [
   ["O guia é físico ou digital?", "É um produto digital, disponibilizado após a confirmação do pagamento."],
   ["Preciso já ter decidido me mudar?", "Não. O material também pode ajudar quem ainda está avaliando se a mudança faz sentido."],
-  [
-    "O guia garante que vou conseguir residência?",
-    "Não. O guia é um material informativo de planejamento. A concessão depende dos requisitos aplicáveis e da análise das autoridades competentes.",
-  ],
-  [
-    "As informações podem mudar?",
-    "Sim. Requisitos, taxas e procedimentos podem mudar. O material deve informar sua data de revisão e indicar as fontes oficiais para conferência.",
-  ],
+
+
   [
     "Posso trabalhar no Paraguai?",
     "As possibilidades dependem da atividade, da situação migratória, das autorizações aplicáveis e de outros requisitos. O guia ajuda a identificar os pontos que precisam ser verificados.",
   ],
-  [
-    "O material resolve minha situação tributária no Brasil?",
-    "Não substitui orientação individual. A residência fiscal e as obrigações tributárias dependem das circunstâncias de cada pessoa e devem ser verificadas com as fontes competentes ou um profissional qualificado.",
-  ],
+
   ["Como recebo o produto?", "Logo após a confirmação do pagamento, você receberá por e-mail as instruções para acessar o guia e os materiais."],
   [
     "Existe política de reembolso?",
