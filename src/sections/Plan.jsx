@@ -110,10 +110,7 @@ export function Compare() {
             </ul>
           </div>
         </div>
-        <p className="cmp-foot">
-          Há muita informação útil disponível de graça. O valor do guia está na organização, na praticidade e na economia de
-          tempo.
-        </p>
+
       </div>
     </section>
   );
