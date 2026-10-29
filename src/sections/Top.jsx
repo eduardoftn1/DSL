@@ -32,13 +32,6 @@ export function Header() {
   );
 }
 
-const BENEFITS = [
-  { label: "DOCUMENTAÇÃO:", text: "entenda as etapas e saiba quais requisitos precisa conferir." },
-  { label: "DINHEIRO:", text: "organize os custos iniciais, a moradia e seu orçamento mensal." },
-  { label: "CIDADES:", text: "compare Assunção, Ciudad del Este e Encarnación." },
-  { label: "PLANEJAMENTO:", text: "saiba o que pesquisar e resolver antes de viajar." },
-  { label: "CHECKLIST:", text: "acompanhe as principais etapas sem depender de dezenas de pesquisas separadas." },
-];
 
 const CHIPS = [
   { icon: "book", text: "Guia digital prático" },
@@ -54,18 +47,9 @@ export function Hero() {
       <div className="wrap hero-grid">
         <div className="hero-copy">
           <h1 id="h-hero">MORAR NO PARAGUAI: O SEGREDO QUE NINGUÉM TE CONTA!</h1>
-          <h2>O QUE VOCÊ VAI DESCOBRIR:</h2>
           <p className="lead">
             <strong>ANTES DE SAIR DO BRASIL, DESCUBRA COMO CHEGAR NO PARAGUAI GANHANDO MAIS DO QUE 90% DOS BRASILEIROS.</strong>
           </p>
-          <ul className="benefits">
-            {BENEFITS.map((b) => (
-              <li key={b.label}>
-                <Icon name="check" />
-                <span><strong>{b.label}</strong> {b.text}</span>
-              </li>
-            ))}
-          </ul>
           <h2>VOCÊ RECEBE:</h2>
           <ul className="chips" aria-label="Materiais incluídos no guia">
             {CHIPS.map((c) => (
