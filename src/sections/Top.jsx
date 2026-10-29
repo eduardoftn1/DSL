@@ -8,8 +8,7 @@ export function DevBar() {
   return (
     <div className="devbar">
       <div className="wrap">
-        <b>CONFIGURAÇÃO PENDENTE:</b> defina <code>checkoutUrl</code> em <code>src/config.js</code>. Enquanto
-        estiver vazio, os botões de compra não levam a nenhum checkout.
+        <b>PAGAMENTO PIX EM CONFIGURAÇÃO:</b> ainda não é possível gerar uma cobrança real neste site.
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import Cities from "./sections/Cities";
 import { Docs, Finance, Compare } from "./sections/Plan";
 import { Offer, Faq, Footer } from "./sections/Close";
 import Thanks from "./sections/Thanks";
+import Checkout from "./sections/Checkout";
 
 const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -34,8 +35,25 @@ function useThanksRoute() {
   return thanks;
 }
 
+function useCheckoutRoute() {
+  const [checkout, setCheckout] = useState(() => window.location.hash === "#checkout");
+
+  useEffect(() => {
+    const onHash = () => setCheckout(window.location.hash === "#checkout");
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+
+  useEffect(() => {
+    if (checkout) window.scrollTo(0, 0);
+  }, [checkout]);
+
+  return checkout;
+}
+
 export default function App() {
   const thanks = useThanksRoute();
+  const checkoutPage = useCheckoutRoute();
   const [toast, setToast] = useState(null);
   const toastTimer = useRef(null);
   const [heroVisible, setHeroVisible] = useState(true);
@@ -49,23 +67,13 @@ export default function App() {
     toastTimer.current = setTimeout(() => setToast(null), 5000);
   }, []);
 
-  /** Props de todo botão de compra: todos usam o mesmo CONFIG.checkoutUrl. */
+  /** Todos os CTAs de compra abrem o checkout próprio e preservam os parâmetros da página. */
   const buy = useCallback(
     (where) => ({
-      href: checkoutReady ? CONFIG.checkoutUrl : "#",
-      ...(checkoutReady ? { target: "_blank", rel: "noopener noreferrer" } : {}),
+      href: "#checkout",
       "data-where": where,
-      onClick: (e) => {
-        if (!checkoutReady) {
-          e.preventDefault();
-          showToast("Checkout ainda não configurado. Defina checkoutUrl em src/config.js.");
-          return;
-        }
-        // InitiateCheckout só dispara quando o clique de fato leva a um checkout configurado.
-        track("InitiateCheckout", { content_name: CONFIG.productName, value: CONFIG.price, currency: CONFIG.currency });
-      },
     }),
-    [showToast]
+    []
   );
 
   const goto = useCallback(
@@ -78,7 +86,7 @@ export default function App() {
 
   // Revela as seções conforme entram na área visível durante a rolagem.
   useEffect(() => {
-    if (thanks || prefersReducedMotion() || !("IntersectionObserver" in window)) return undefined;
+    if (thanks || checkoutPage || prefersReducedMotion() || !("IntersectionObserver" in window)) return undefined;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -98,7 +106,7 @@ export default function App() {
     });
 
     return () => observer.disconnect();
-  }, [thanks]);
+  }, [thanks, checkoutPage]);
 
   // PageView uma única vez.
   useEffect(() => {
@@ -108,9 +116,16 @@ export default function App() {
     track("PageView");
   }, []);
 
+  // Inicia o evento de checkout ao abrir a página, sem registrar compra.
+  useEffect(() => {
+    if (checkoutPage) {
+      track("InitiateCheckout", { content_name: CONFIG.productName, value: CONFIG.price, currency: CONFIG.currency });
+    }
+  }, [checkoutPage]);
+
   // Observa o hero (barra fixa) e a oferta (barra fixa e ViewContent).
   useEffect(() => {
-    if (thanks) return undefined;
+    if (thanks || checkoutPage) return undefined;
     const hero = document.getElementById("hero");
     const offer = document.getElementById("oferta");
     if (!hero || !offer || !("IntersectionObserver" in window)) {
@@ -134,9 +149,9 @@ export default function App() {
       heroObs.disconnect();
       offerObs.disconnect();
     };
-  }, [thanks]);
+  }, [thanks, checkoutPage]);
 
-  const showSticky = !thanks && !heroVisible && !offerVisible;
+  const showSticky = !thanks && !checkoutPage && !heroVisible && !offerVisible;
 
   useEffect(() => {
     document.body.classList.toggle("has-sticky", showSticky);
@@ -148,6 +163,8 @@ export default function App() {
       <DevBar />
       {thanks ? (
         <Thanks />
+      ) : checkoutPage ? (
+        <Checkout />
       ) : (
         <>
           <Header />
