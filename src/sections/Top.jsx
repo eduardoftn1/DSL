@@ -33,17 +33,18 @@ export function Header() {
 }
 
 const BENEFITS = [
-  "Entenda como organizar seu planejamento de mudança.",
-  "Conheça as etapas e os documentos que precisam ser verificados.",
-  "Compare cidades e avalie custos de moradia.",
-  "Organize seu orçamento antes de assumir compromissos.",
-  "Consulte fontes oficiais para conferir os requisitos atualizados.",
+  { label: "DOCUMENTAÇÃO:", text: "entenda as etapas e saiba quais requisitos precisa conferir." },
+  { label: "DINHEIRO:", text: "organize os custos iniciais, a moradia e seu orçamento mensal." },
+  { label: "CIDADES:", text: "compare Assunção, Ciudad del Este e Encarnación." },
+  { label: "PLANEJAMENTO:", text: "saiba o que pesquisar e resolver antes de viajar." },
+  { label: "CHECKLIST:", text: "acompanhe as principais etapas sem depender de dezenas de pesquisas separadas." },
 ];
 
 const CHIPS = [
-  { icon: "book", text: "Guia digital" },
-  { icon: "list", text: "Checklist prático" },
-  { icon: "clock", text: "Acesso após confirmação do pagamento" },
+  { icon: "book", text: "Guia digital prático" },
+  { icon: "list", text: "Checklist de planejamento" },
+  { icon: "sheet", text: "Planilha de custos" },
+  { icon: "link", text: "Links para fontes oficiais" },
 ];
 
 export function Hero() {
@@ -52,20 +53,30 @@ export function Hero() {
     <section className="hero theme-red" id="hero" aria-labelledby="h-hero">
       <div className="wrap hero-grid">
         <div className="hero-copy">
-          <h1 id="h-hero">Pensando em morar no Paraguai? Descubra o que você precisa saber antes de se mudar.</h1>
+          <h1 id="h-hero">MORAR NO PARAGUAI: O SEGREDO QUE NINGUÉM TE CONTA!</h1>
           <p className="lead">
-            Um guia prático para organizar seus próximos passos, entender os custos, conhecer as etapas da documentação e
-            avaliar se a mudança faz sentido para você.
+            <strong>ANTES DE SAIR DO BRASIL, DESCUBRA COMO SE PREPARAR PARA CHEGAR AO PARAGUAI.</strong>
           </p>
+          <p>
+            Quanto dinheiro você precisa levar? Quais documentos precisa preparar? Qual cidade escolher? Como organizar
+            sua mudança sem esquecer etapas importantes?
+          </p>
+          <p><strong>Não espere estar com as malas prontas para começar a procurar essas respostas.</strong></p>
+          <p>
+            Com o <strong>GUIA MORAR NO PARAGUAI</strong>, você reúne em um só lugar informações essenciais para planejar
+            seus próximos passos e tomar decisões mais conscientes antes de gastar dinheiro com a mudança.
+          </p>
+          <h2>O QUE VOCÊ VAI DESCOBRIR:</h2>
           <ul className="benefits">
             {BENEFITS.map((b) => (
-              <li key={b}>
+              <li key={b.label}>
                 <Icon name="check" />
-                {b}
+                <span><strong>{b.label}</strong> {b.text}</span>
               </li>
             ))}
           </ul>
-          <ul className="chips" aria-label="Características do produto">
+          <h2>VOCÊ RECEBE:</h2>
+          <ul className="chips" aria-label="Materiais incluídos no guia">
             {CHIPS.map((c) => (
               <li key={c.text}>
                 <Icon name={c.icon} />
@@ -74,16 +85,17 @@ export function Hero() {
             ))}
           </ul>
           <div className="offer-box" id="oferta-hero">
-            <span className="offer-label">ACESSO AO GUIA DIGITAL</span>
+            <span className="offer-label">NÃO PRECISA GASTAR UMA FORTUNA PARA COMEÇAR A SE ORGANIZAR.</span>
             <div className="price-row">
               <span className="price">{priceLabel}</span>
-              <span className="price-note">pagamento único</span>
+              <span className="price-note">pagamento único, sem mensalidade</span>
             </div>
             <a className="btn btn-block" {...buy("hero")}>
-              QUERO ACESSAR O GUIA
+              QUERO ME PREPARAR PARA MORAR NO PARAGUAI
             </a>
-            <p className="fine">Produto digital • Entrega após confirmação do pagamento.</p>
+            <p className="fine">Produto digital. Acesso após a confirmação do pagamento.</p>
           </div>
+          <p><strong>Sua mudança começa com planejamento. Descubra o que precisa resolver antes de dar o próximo passo.</strong></p>
         </div>
 
         <div className="hero-art">
