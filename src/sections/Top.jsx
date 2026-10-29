@@ -50,7 +50,10 @@ export function Hero() {
             alt="Morar no Paraguai: o segredo que ninguém te conta"
           />
           <p className="lead">
-            <strong>ANTES DE SAIR DO BRASIL, DESCUBRA COMO CHEGAR NO PARAGUAI GANHANDO MAIS DO QUE 90% DOS BRASILEIROS.</strong>
+            <strong>
+              Antes de sair do Brasil, descubra como chegar no Paraguai ganhando mais do que{" "}
+              <span className="hero-lead-highlight">90% dos brasileiros.</span>
+            </strong>
           </p>
           <h2>VOCÊ RECEBE:</h2>
           <ul className="chips" aria-label="Materiais incluídos no guia">
