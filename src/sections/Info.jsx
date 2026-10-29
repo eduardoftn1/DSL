@@ -90,7 +90,7 @@ export function Expert() {
     <section className="section theme-blue" aria-labelledby="h-expert">
       <div className="wrap expert-grid">
         <div className="expert-copy">
-          <h2 id="h-expert">Informação organizada para você tomar uma decisão melhor.</h2>
+          <h2 id="h-expert">Larguei tudo no Brasil e vivo no Paraguai há 5 anos.</h2>
           <div className="expert-who">
             <div className="avatar" aria-hidden="true">
               <Icon name="user" />
@@ -101,13 +101,11 @@ export function Expert() {
             </div>
           </div>
           <p>
-            Este guia reúne informações e referências úteis para brasileiros que estão avaliando a possibilidade de morar no
-            Paraguai. A proposta é organizar os principais assuntos em um material prático, para que você saiba o que
-            pesquisar, quais etapas considerar e onde conferir as informações importantes.
+            Há cinco anos, deixei tudo no Brasil e comecei uma nova vida no Paraguai. Cheguei sem nada e, com o tempo,
+            conquistei meu espaço. No caminho, vivi erros e acertos que mudaram minha forma de planejar.
           </p>
-          <p className="todo">
-            Espaço reservado: foto real do responsável e breve descrição da experiência efetivamente comprovada. Preencher
-            apenas com informações verdadeiras.
+          <p>
+            Agora quero compartilhar essas experiências para ajudar outras pessoas a se prepararem melhor para essa mudança.
           </p>
         </div>
         <Video />

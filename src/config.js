@@ -14,7 +14,7 @@ export const CONFIG = {
   paymentMethods: [], // ex.: ["Pix", "Cartão"]. Só aparece se preenchido.
   supportContact: "", // PENDENTE: canal de suporte (e-mail, WhatsApp etc.)
 
-  responsibleName: "[NOME DO RESPONSÁVEL]",
+  responsibleName: "Henrique",
   offerOwner: "[NOME OU IDENTIFICAÇÃO DO RESPONSÁVEL PELA OFERTA]",
 
   // Só marque true quando o item existir e estiver incluído no produto.
