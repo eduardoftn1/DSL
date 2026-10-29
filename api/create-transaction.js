@@ -4,6 +4,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ status: "error", message: "Método não permitido." });
   }
 
+  // Configure esta chave como segredo no servidor; nunca a inclua no código do navegador.
   const apiKey = process.env.PARADISE_API_KEY;
   if (!apiKey) {
     return res.status(503).json({
