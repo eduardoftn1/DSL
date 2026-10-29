@@ -16,8 +16,8 @@ export function Offer() {
     <section className="offer-sec theme-white" id="oferta" aria-labelledby="h-offer">
       <div className="wrap offer-grid">
         <div className="offer-copy">
-          <h2 id="h-offer">Comece seu planejamento com mais clareza.</h2>
-          <p>Tenha em um só lugar o guia, o checklist, a planilha de custos e as referências para continuar sua pesquisa.</p>
+          <h2 id="h-offer">Comece sua vida nova fora do Brasil</h2>
+          <p>Viva o sonho de todo brasileiro: comer bem, viajar e conquistar tudo!</p>
         </div>
         <div className="offer-card">
           <ul>
