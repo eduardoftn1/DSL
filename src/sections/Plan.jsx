@@ -17,17 +17,6 @@ export function Docs() {
         <div>
           <div className="section-head" style={{ marginBottom: 20 }}>
             <h2 id="h-docs">Entenda as etapas antes de começar a reunir seus documentos.</h2>
-            <p>
-              A regularização exige consulta aos requisitos aplicáveis ao perfil de cada pessoa e à modalidade de residência
-              pretendida.
-            </p>
-          </div>
-          <div className="notice">
-            <Icon name="info" />
-            <span>
-              Os requisitos podem mudar e variam conforme a situação individual. Consulte sempre as fontes oficiais antes de
-              iniciar o processo.
-            </span>
           </div>
         </div>
         <div>
