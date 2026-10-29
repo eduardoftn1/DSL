@@ -67,11 +67,10 @@ export default function Previews() {
         <div className="prev-grid social-proof-grid">
           {["nNVqRX1", "0owGOcw", "pBb1E1C"].map((imageId, index) => (
             <div className="prev-frame social-proof-image" key={imageId}>
-              <iframe
-                src={`https://imgur.com/${imageId}/embed?pub=true`}
-                title={`Depoimento ${index + 1}`}
+              <img
+                src={`https://i.imgur.com/${imageId}.jpg`}
+                alt={`Foto de depoimento ${index + 1}`}
                 loading="lazy"
-                allowFullScreen
               />
             </div>
           ))}
