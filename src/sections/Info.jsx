@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { CONFIG } from "../config";
 import Icon from "../components/Icon";
 
@@ -85,7 +84,7 @@ function Video() {
 export function Expert() {
   return (
     <section className="section theme-blue" aria-labelledby="h-expert">
-      <div className="wrap expert-grid">
+      <div className="wrap expert-grid" style={{ gridTemplateColumns: "1fr" }}>
         <div className="expert-copy">
           <h2 id="h-expert">Como larguei tudo no Brasil e vivo no Paraguai há 5 anos.</h2>
           <div className="expert-who">
@@ -105,7 +104,6 @@ export function Expert() {
             Agora quero compartilhar essas experiências para ajudar outras pessoas a se prepararem melhor para essa mudança.
           </p>
         </div>
-        <Video />
       </div>
     </section>
   );
