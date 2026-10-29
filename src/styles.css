@@ -1,8 +1,8 @@
 /* Layout: página única de venda, coluna estreita no mobile, 2 colunas no hero em desktop (texto | capa do guia).
    Identidade fixada pela especificação do cliente (paleta e Inter), ela substitui qualquer escolha própria. */
 :root{
-  --bg:#151D2B; --fg:#F1F5FC; --red:#D92D36; --red-dark:#B8222B; --blue:#2859A8; --green:#16845B;
-  --white:#1E2A3C; --muted:#B9C5D8; --line:#394A63; --green-soft:#263D3A; --red-soft:#452B35;
+  --bg:#0A1220; --fg:#F1F5FC; --red:#D92D36; --red-dark:#B8222B; --blue:#2859A8; --green:#16845B;
+  --white:#121E32; --muted:#C1CCDE; --line:#2D405E; --green-soft:#203B39; --red-soft:#3C2732;
   --navy-2:#1A2638;
   --font:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   --radius:12px; --radius-lg:16px;
@@ -31,7 +31,7 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .section{padding-block:48px}
 .section-head{display:grid;gap:12px;margin-bottom:28px;max-width:720px}
 .section-head p{color:var(--muted);font-size:17px}
-.band-white{background:var(--white);border-block:1px solid var(--line)}
+.band-white{background:linear-gradient(145deg,#111D31 0%,var(--white) 55%,#0D192C 100%);border-block:1px solid var(--line)}
 
 /* botões */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:54px;padding:14px 22px;border:0;border-radius:var(--radius);background:linear-gradient(110deg,var(--red),var(--red-dark));color:#fff;font:800 16px/1.2 var(--font);letter-spacing:.01em;text-decoration:none;text-align:center;cursor:pointer;box-shadow:0 8px 20px rgba(217,45,54,.28),0 3px 8px rgba(0,56,168,.12);transition:filter .15s,transform .15s,box-shadow .15s}
@@ -66,7 +66,7 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips li{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--line);background:var(--white);border-radius:999px;font-size:13px;font-weight:600;color:var(--fg)}
 .chips svg{width:16px;height:16px;color:var(--green);stroke-width:2.4}
-.offer-box{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);padding:20px;box-shadow:var(--shadow);display:grid;gap:14px}
+.offer-box{background:radial-gradient(ellipse at 100% 0%,rgba(40,89,168,.2),transparent 48%),linear-gradient(145deg,#182843,var(--white) 65%,#101A2B);border:1px solid var(--line);border-radius:var(--radius-lg);padding:20px;box-shadow:0 18px 42px rgba(0,0,0,.24),0 0 28px rgba(40,89,168,.12);display:grid;gap:14px}
 .offer-label{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--muted)}
 .price-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .price{font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
@@ -84,7 +84,7 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
 
 /* identificação */
 .cards-5{display:grid;gap:14px}
-.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);display:grid;gap:10px;align-content:start;min-width:0;transition:transform .2s,box-shadow .2s,border-color .2s}
+.card{background:radial-gradient(ellipse at 100% 0%,rgba(40,89,168,.14),transparent 48%),linear-gradient(145deg,#172640,var(--white) 66%,#101A2B);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 8px 22px rgba(0,0,0,.2),0 0 24px rgba(40,89,168,.08);display:grid;gap:10px;align-content:start;min-width:0;transition:transform .2s,box-shadow .2s,border-color .2s}
 .card:hover{transform:translateY(-2px);border-color:rgba(0,56,168,.24);box-shadow:0 8px 16px rgba(21,25,35,.07),0 18px 36px rgba(0,56,168,.12)}
 .card p{color:var(--muted);font-size:15px}
 .ico{width:42px;height:42px;border-radius:10px;background:var(--red-soft);color:var(--red);display:grid;place-items:center}
@@ -182,7 +182,7 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
 @media (min-width:900px){.fin-grid{grid-template-columns:.9fr 1.1fr;gap:56px}}
 .fin-copy{display:grid;gap:16px;align-content:start}
 .fin-copy p{color:var(--muted);font-size:17px}
-.sheet{background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden}
+.sheet{background:radial-gradient(ellipse at 100% 0%,rgba(40,89,168,.16),transparent 48%),linear-gradient(145deg,#172640,var(--white) 68%,#101A2B);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:0 14px 34px rgba(0,0,0,.24),0 0 28px rgba(40,89,168,.1);overflow:hidden}
 .sheet-top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px;background:#151923;color:#fff;font-size:13px;font-weight:700}
 .sheet-top small{font-weight:500;color:#AAB1C0}
 .sheet-row{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:12px;padding:11px 16px;border-top:1px solid var(--line);font-size:14px;align-items:center}
@@ -269,7 +269,7 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
 }
 .theme-white{
   color:var(--fg);
-  background:linear-gradient(145deg,#1B2638 0%,var(--white) 72%,#172235 100%);
+  background:radial-gradient(ellipse at 12% 0%,rgba(40,89,168,.2),transparent 42%),radial-gradient(ellipse at 90% 100%,rgba(28,66,128,.16),transparent 44%),linear-gradient(145deg,#0D192C 0%,var(--white) 52%,#101A2B 100%);
 }
 .theme-red .section-head p,
 .theme-red .lead,
