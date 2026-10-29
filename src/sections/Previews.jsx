@@ -65,13 +65,14 @@ export default function Previews() {
           <p>Depoimentos</p>
         </div>
         <div className="prev-grid social-proof-grid">
-          {[1, 2, 3].map((number) => (
-            <div className="prev-frame social-proof-image" key={number} aria-label={`Espaço para imagem de depoimento ${number}`}>
-              <div className="prev-ph">
-                <Icon name="image" />
-                <b>ADICIONE UMA FOTO</b>
-                <span>Espaço reservado para depoimento</span>
-              </div>
+          {["nNVqRX1", "0owGOcw", "pBb1E1C"].map((imageId, index) => (
+            <div className="prev-frame social-proof-image" key={imageId}>
+              <iframe
+                src={`https://imgur.com/${imageId}/embed?pub=true`}
+                title={`Depoimento ${index + 1}`}
+                loading="lazy"
+                allowFullScreen
+              />
             </div>
           ))}
         </div>
