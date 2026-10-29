@@ -46,7 +46,11 @@ export function Hero() {
     <section className="hero theme-red" id="hero" aria-labelledby="h-hero">
       <div className="wrap hero-grid">
         <div className="hero-copy">
-          <h1 id="h-hero">MORAR NO PARAGUAI: O SEGREDO QUE NINGUÉM TE CONTA!</h1>
+          <img
+            className="hero-banner"
+            src="https://i.imgur.com/rkmx1Qb.jpg"
+            alt="Morar no Paraguai: o segredo que ninguém te conta"
+          />
           <p className="lead">
             <strong>ANTES DE SAIR DO BRASIL, DESCUBRA COMO CHEGAR NO PARAGUAI GANHANDO MAIS DO QUE 90% DOS BRASILEIROS.</strong>
           </p>
