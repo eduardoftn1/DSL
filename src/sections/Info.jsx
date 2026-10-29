@@ -90,7 +90,7 @@ export function Expert() {
     <section className="section theme-blue" aria-labelledby="h-expert">
       <div className="wrap expert-grid">
         <div className="expert-copy">
-          <h2 id="h-expert">Como Larguei tudo no Brasil e vivo no Paraguai há 5 anos.</h2>
+          <h2 id="h-expert">Como larguei tudo no Brasil e vivo no Paraguai há 5 anos.</h2>
           <div className="expert-who">
             <div className="avatar" aria-hidden="true">
               <Icon name="user" />
