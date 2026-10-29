@@ -73,7 +73,7 @@ export function Hero() {
             </a>
             <p className="fine">Produto digital. Acesso após a confirmação do pagamento.</p>
           </div>
-          <p><strong>Sua mudança começa com planejamento. Descubra o que precisa resolver antes de dar o próximo passo.</strong></p>
+
         </div>
 
         <div className="hero-art">
