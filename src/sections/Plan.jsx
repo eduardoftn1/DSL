@@ -15,18 +15,21 @@ export function Docs() {
   return (
     <section className="section theme-blue" aria-labelledby="h-docs">
       <div className="wrap docs-grid">
-        <div>
-          <div className="section-head" style={{ marginBottom: 20 }}>
+        <div className="dream-heading">
+          <div className="section-head">
             <h2 id="h-docs">Realize o sonho de todo brasileiro.</h2>
           </div>
         </div>
-        <div>
-          <ol className="steps">
-            {BENEFITS.map((benefit) => (
-              <li key={benefit}>{benefit}</li>
-            ))}
-          </ol>
-        </div>
+        <ul className="dream-benefits">
+          {BENEFITS.map((benefit) => (
+            <li key={benefit}>
+              <span className="benefit-check">
+                <Icon name="check" />
+              </span>
+              <span>{benefit}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
