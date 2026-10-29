@@ -4,8 +4,8 @@ const WAVES = "M0 128c30-6 50 6 80 0s50-6 80 0 50 6 80 0 50-6 80 0";
 function Capital() {
   return (
     <svg viewBox="0 0 320 140" role="img" aria-label="Ilustração de uma cidade com prédios e um rio">
-      <rect width="320" height="140" fill="#EEF0F4" />
-      <g fill="#C9CEDA">
+      <rect width="320" height="140" fill="#1B2638" />
+      <g fill="#35445C">
         <rect x="20" y="70" width="26" height="60" />
         <rect x="50" y="48" width="22" height="82" />
         <rect x="76" y="64" width="30" height="66" />
@@ -25,8 +25,8 @@ function Capital() {
 function Border() {
   return (
     <svg viewBox="0 0 320 140" role="img" aria-label="Ilustração de uma cidade de fronteira com uma ponte">
-      <rect width="320" height="140" fill="#EEF0F4" />
-      <g fill="#C9CEDA">
+      <rect width="320" height="140" fill="#1B2638" />
+      <g fill="#35445C">
         <rect x="16" y="82" width="36" height="48" />
         <rect x="56" y="66" width="30" height="64" />
         <rect x="90" y="88" width="34" height="42" />
@@ -47,8 +47,8 @@ function Border() {
 function Riverside() {
   return (
     <svg viewBox="0 0 320 140" role="img" aria-label="Ilustração de uma cidade de pequeno porte à beira de um rio">
-      <rect width="320" height="140" fill="#EEF0F4" />
-      <g fill="#C9CEDA">
+      <rect width="320" height="140" fill="#1B2638" />
+      <g fill="#35445C">
         <rect x="24" y="86" width="30" height="44" />
         <rect x="58" y="96" width="26" height="34" />
         <rect x="88" y="78" width="28" height="52" />
