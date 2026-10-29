@@ -68,7 +68,7 @@ const FAQ = [
   ["Como recebo o produto?", "Logo após a confirmação do pagamento, você receberá por e-mail as instruções para acessar o guia e os materiais."],
   [
     "Existe política de reembolso?",
-    "Consulte a política de compra e os direitos legais aplicáveis ao consumidor, incluindo o direito de arrependimento previsto na legislação brasileira.",
+    "Você tem 30 dias de garantia. Se não ficar satisfeito, consulte as condições para solicitar o reembolso.",
   ],
 ];
 
