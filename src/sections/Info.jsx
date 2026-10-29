@@ -8,7 +8,7 @@ const PROBLEMS = [
   { icon: "wallet", title: "Planejamento financeiro", text: "Organize os gastos iniciais e as despesas mensais que devem entrar na sua conta." },
   { icon: "pin", title: "Escolha da cidade", text: "Compare fatores como moradia, infraestrutura, serviços e estilo de vida." },
   { icon: "shield", title: "Lista de empresas contratando com salário de +R$5k", text: "Listas enormes de empresas atualizadas." },
-  { icon: "list", title: "Organização da mudança", text: "Transforme suas dúvidas em uma sequência de tarefas para executar." },
+  { icon: "list", title: "Grupo VIP", text: "Acesso ao Grupo VIP com atualizações para o resto da vida!" },
 ];
 
 export function Identification() {
