@@ -55,16 +55,7 @@ export function Hero() {
         <div className="hero-copy">
           <h1 id="h-hero">MORAR NO PARAGUAI: O SEGREDO QUE NINGUÉM TE CONTA!</h1>
           <p className="lead">
-            <strong>ANTES DE SAIR DO BRASIL, DESCUBRA COMO SE PREPARAR PARA CHEGAR AO PARAGUAI.</strong>
-          </p>
-          <p>
-            Quanto dinheiro você precisa levar? Quais documentos precisa preparar? Qual cidade escolher? Como organizar
-            sua mudança sem esquecer etapas importantes?
-          </p>
-          <p><strong>Não espere estar com as malas prontas para começar a procurar essas respostas.</strong></p>
-          <p>
-            Com o <strong>GUIA MORAR NO PARAGUAI</strong>, você reúne em um só lugar informações essenciais para planejar
-            seus próximos passos e tomar decisões mais conscientes antes de gastar dinheiro com a mudança.
+            <strong>ANTES DE SAIR DO BRASIL, DESCUBRA COMO CHEGAR NO PARAGUAI GANHANDO MAIS DO QUE 90% DOS BRASILEIROS.</strong>
           </p>
           <h2>O QUE VOCÊ VAI DESCOBRIR:</h2>
           <ul className="benefits">
