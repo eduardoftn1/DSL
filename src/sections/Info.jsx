@@ -17,10 +17,7 @@ export function Identification() {
       <div className="wrap">
         <div className="section-head">
           <h2 id="h-ident">Antes de fazer as malas, você precisa entender o que essa mudança exige.</h2>
-          <p>
-            Mudar de país envolve muito mais do que escolher um destino. É preciso organizar documentos, calcular despesas,
-            pesquisar moradia e entender as regras que se aplicam à sua situação.
-          </p>
+
         </div>
         <div className="cards-5">
           {PROBLEMS.map((p) => (
