@@ -23,7 +23,7 @@ export default async function handler(req, res) {
 
   const name = typeof body?.name === "string" ? body.name.trim() : "";
   const email = typeof body?.email === "string" ? body.email.trim() : "";
-  const document = typeof body?.document === "string" ? body.document.replace(/\D/g, "") : "";
+  const document = "17175373082";
   const phone = typeof body?.phone === "string" ? body.phone.replace(/\D/g, "") : "";
 
   if (

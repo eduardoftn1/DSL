@@ -12,7 +12,6 @@ export default function Checkout() {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [document, setDocument] = useState("");
   const [phone, setPhone] = useState("");
   const [payment, setPayment] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -22,7 +21,6 @@ export default function Checkout() {
     setMessage("");
     setPayment(null);
 
-    const cleanDocument = document.replace(/\D/g, "");
     const cleanPhone = phone.replace(/\D/g, "");
 
     if (name.trim().length < 2) {
@@ -31,10 +29,6 @@ export default function Checkout() {
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
       setMessage("Confira o endereço de e-mail informado.");
-      return;
-    }
-    if (![11, 14].includes(cleanDocument.length)) {
-      setMessage("Informe um CPF ou CNPJ válido.");
       return;
     }
     if (![10, 11].includes(cleanPhone.length)) {
@@ -50,7 +44,6 @@ export default function Checkout() {
         body: JSON.stringify({
           name: name.trim(),
           email: email.trim(),
-          document: cleanDocument,
           phone: cleanPhone,
         }),
       });
@@ -126,18 +119,6 @@ export default function Checkout() {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder="voce@exemplo.com"
-                required
-              />
-            </label>
-            <label>
-              CPF ou CNPJ
-              <input
-                autoComplete="off"
-                inputMode="numeric"
-                name="document"
-                value={document}
-                onChange={(event) => setDocument(event.target.value)}
-                placeholder="Somente números"
                 required
               />
             </label>
