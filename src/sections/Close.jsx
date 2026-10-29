@@ -108,8 +108,8 @@ export function Footer() {
                 {label}
               </a>
             ) : (
-              <span key={k} className="off" title="Link a configurar">
-                {label} (a configurar)
+              <span key={k} className="off">
+                {label}
               </span>
             )
           )}
