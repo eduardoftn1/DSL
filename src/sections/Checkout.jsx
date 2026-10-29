@@ -35,6 +35,11 @@ export default function Checkout() {
     <main className="checkout-page">
       <div className="checkout-wrap">
         <header className="checkout-header">
+          <img
+            className="checkout-brand-image"
+            src="https://i.imgur.com/rkmx1Qb.jpg"
+            alt="Morar no Paraguai"
+          />
           <a className="checkout-back" href="#" aria-label="Voltar à página do produto">
             Morar no Paraguai
           </a>

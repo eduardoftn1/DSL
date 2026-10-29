@@ -264,6 +264,7 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .checkout-page{min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#fff 0%,#F5F7FA 62%);color:#151923;padding:20px 0 32px}
 .checkout-wrap{width:min(100% - 24px,620px);margin:0 auto;display:grid;gap:14px}
 .checkout-header{display:grid;gap:8px;padding:8px 4px 6px}
+.checkout-brand-image{display:block;width:100%;max-height:150px;object-fit:contain;object-position:left center;border-radius:12px}
 .checkout-back{font-size:21px;font-weight:800;letter-spacing:-.03em;text-decoration:none;color:#151923}
 .checkout-label{justify-self:start;border:1px solid #D9DEE8;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700;color:#39465B;background:#fff}
 .checkout-header p{font-size:14px;color:#5B6473;line-height:1.45}
