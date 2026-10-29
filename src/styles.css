@@ -135,6 +135,8 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .prev-frame{aspect-ratio:3/4;width:100%;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:grid;place-items:center;position:relative}
 .prev-frame img{width:100%;height:100%;object-fit:cover}
 .social-proof-image iframe{width:100%;height:100%;border:0}
+.social-proof-image{display:block;aspect-ratio:auto;height:auto}
+.social-proof-image img{display:block;width:100%;height:auto;object-fit:contain}
 .prev-ph{display:grid;gap:8px;justify-items:center;text-align:center;padding:16px;color:var(--muted);font-size:13px}
 .prev-ph svg{width:30px;height:30px;color:#B6BCC8}
 .prev-ph b{font-size:11px;letter-spacing:.12em;color:var(--red);border:1px solid var(--red);padding:2px 8px;border-radius:4px}
