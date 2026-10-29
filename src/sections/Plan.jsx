@@ -2,12 +2,13 @@ import { CONFIG } from "../config";
 import { useApp } from "../context";
 import Icon from "../components/Icon";
 
-/* ---------- Documentação e residência ---------- */
-const STEPS = [
-  "Identificar a modalidade de residência aplicável.",
-  "Consultar a lista oficial e atualizada de documentos.",
-  "Verificar exigências de certidões, apostilamento, tradução e validade, quando aplicáveis.",
-  "Conferir taxas, agendamentos, procedimentos e prazos junto às autoridades responsáveis.",
+/* ---------- Benefícios e objetivos ---------- */
+const BENEFITS = [
+  "Ir ao mercado com mais tranquilidade e menos preocupação com os preços.",
+  "Conquistar o carro que você deseja.",
+  "Ter um smartphone de última geração.",
+  "Montar uma casa mobiliada do seu jeito.",
+  "Construir uma vida feliz ao lado da sua família.",
 ];
 
 export function Docs() {
@@ -16,26 +17,16 @@ export function Docs() {
       <div className="wrap docs-grid">
         <div>
           <div className="section-head" style={{ marginBottom: 20 }}>
-            <h2 id="h-docs">Entenda as etapas antes de começar a reunir seus documentos.</h2>
+            <h2 id="h-docs">Realize o sonho de todo brasileiro.</h2>
+            <p>Com planejamento, você pode buscar mais possibilidades e trabalhar pelos objetivos que deseja para sua vida.</p>
           </div>
         </div>
         <div>
           <ol className="steps">
-            {STEPS.map((s) => (
-              <li key={s}>{s}</li>
+            {BENEFITS.map((benefit) => (
+              <li key={benefit}>{benefit}</li>
             ))}
           </ol>
-          <div className="links" aria-label="Fontes oficiais para consulta">
-            {CONFIG.officialLinks.map((l) => (
-              <a key={l.url} href={l.url} target="_blank" rel="noopener noreferrer">
-                <Icon name="link" />
-                <span>
-                  {l.label}
-                  <small>{l.note}</small>
-                </span>
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </section>
