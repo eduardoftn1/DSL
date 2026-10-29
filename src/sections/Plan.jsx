@@ -73,10 +73,10 @@ const SCATTERED = [
   "Falta de uma lista centralizada para acompanhar o planejamento.",
 ];
 const ORGANIZED = [
-  "Conteúdo separado por assunto.",
-  "Checklist para acompanhar tarefas.",
-  "Planilha para organizar custos.",
-  "Links para consultar informações oficiais.",
+  "Salários de +R$7k",
+  "Emprego rápido",
+  "Encontre aluguel barato",
+  "Ferramentas, mentoria e grupo VIP",
 ];
 
 export function Compare() {
