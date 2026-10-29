@@ -21,7 +21,6 @@ export function Header() {
       <div className="wrap">
         <a className="logo" href="#" aria-label="Morar no Paraguai, guia prático">
           <strong>MORAR NO PARAGUAI</strong>
-          <span>GUIA PRÁTICO</span>
         </a>
         <a className="btn btn-sm" href="#oferta" onClick={goto("oferta")}>
           Quero o guia
