@@ -150,8 +150,8 @@ const ITEMS = [
     key: "sources",
     icon: "link",
     green: true,
-    title: "Lista de consultas importantes",
-    text: "Referências para consultar requisitos migratórios, informações tributárias e outros dados relevantes diretamente nas fontes responsáveis.",
+    title: "Listas importantes",
+    text: "Listas completas de melhores empregos, cidades, bairros, escolas...",
   },
 ];
 
