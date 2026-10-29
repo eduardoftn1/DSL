@@ -8,7 +8,7 @@ const CITIES = [
     name: "Assunção",
     intro: "Capital do país e maior centro urbano, às margens do rio Paraguai.",
     traits: ["Sede de órgãos públicos e de grande parte dos serviços", "Mais opções de bairros, moradia e serviços"],
-    factors: ["Bairro e proximidade de serviços", "Tipo de moradia e custo de entrada", "Deslocamentos do dia a dia"],
+    factors: ["Bairro e proximidade de serviços", "Tipo de moradia e custo de entrada"],
   },
   {
     id: "cde",
@@ -19,7 +19,6 @@ const CITIES = [
     factors: [
       "Tipo de trabalho ou atividade pretendida",
       "Rotina de travessia da fronteira, se houver",
-      "Moradia, serviços e estilo de vida",
     ],
   },
   {
@@ -31,7 +30,6 @@ const CITIES = [
     factors: [
       "Disponibilidade de serviços de que você precisa",
       "Mercado de moradia e de trabalho local",
-      "Distância até outras cidades",
     ],
   },
 ];
