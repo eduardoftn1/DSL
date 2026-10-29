@@ -76,9 +76,7 @@ export default function Cities() {
             </article>
           ))}
         </div>
-        <p className="city-note">
-          Nenhuma cidade é a melhor para todos. O guia ajuda a comparar os fatores que pesam na sua decisão.
-        </p>
+
       </div>
     </section>
   );
