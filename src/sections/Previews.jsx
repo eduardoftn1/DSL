@@ -57,42 +57,25 @@ function Modal({ item, onClose }) {
 }
 
 export default function Previews() {
-  const [open, setOpen] = useState(null);
-  const opener = useRef(null);
-
-  const close = () => {
-    setOpen(null);
-    opener.current?.focus();
-  };
-
   return (
     <section className="section theme-red" aria-labelledby="h-prev">
       <div className="wrap">
         <div className="section-head">
-          <h2 id="h-prev">Veja como o material está organizado.</h2>
+          <h2 id="h-prev">Vem ser feliz!</h2>
+          <p>Depoimentos</p>
         </div>
-        <div className="prev-grid">
-          {CONFIG.previews.map((p, i) => (
-            <button
-              key={p.title}
-              type="button"
-              className="prev-btn"
-              aria-label={`Ampliar: ${p.title}`}
-              onClick={(e) => {
-                opener.current = e.currentTarget;
-                setOpen(i);
-              }}
-            >
-              <div className="prev-frame">
-                <Preview item={p} lazy />
+        <div className="prev-grid social-proof-grid">
+          {[1, 2, 3].map((number) => (
+            <div className="prev-frame social-proof-image" key={number} aria-label={`Espaço para imagem de depoimento ${number}`}>
+              <div className="prev-ph">
+                <Icon name="image" />
+                <b>ADICIONE UMA FOTO</b>
+                <span>Espaço reservado para depoimento</span>
               </div>
-              <span className="t">{p.title}</span>
-              <span className="z">{p.desc}</span>
-            </button>
+            </div>
           ))}
         </div>
       </div>
-      {open !== null && <Modal item={CONFIG.previews[open]} onClose={close} />}
     </section>
   );
 }
