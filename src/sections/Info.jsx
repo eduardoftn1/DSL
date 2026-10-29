@@ -89,8 +89,8 @@ export function Expert() {
         <div className="expert-copy">
           <h2 id="h-expert">Como larguei tudo no Brasil e vivo no Paraguai há 5 anos.</h2>
           <div className="expert-who">
-            <div className="avatar" aria-hidden="true">
-              <Icon name="user" />
+            <div className="avatar">
+              <img src="https://i.imgur.com/NbiPEj7.jpg" alt="Henrique" />
             </div>
             <div>
               <b>{CONFIG.responsibleName}</b>

@@ -104,6 +104,7 @@ svg.i{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .expert-who{display:flex;gap:14px;align-items:center}
 .avatar{width:72px;height:72px;border-radius:50%;border:1.5px dashed #B6BCC8;background:var(--bg);display:grid;place-items:center;color:#98A0AE;flex:none}
 .avatar svg{width:32px;height:32px}
+.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 25%}
 .expert-who b{display:block;font-size:17px}
 .expert-who small{color:var(--muted);font-size:13px}
 .todo{border:1.5px dashed #B6BCC8;border-radius:var(--radius);padding:12px 14px;color:var(--muted);font-size:14px;background:var(--bg)}
