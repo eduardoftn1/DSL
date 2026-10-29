@@ -4,7 +4,7 @@ import Icon from "../components/Icon";
 
 /* ---------- Identificação ---------- */
 const PROBLEMS = [
-  { icon: "doc", title: "Documentação", text: "Saiba quais documentos e procedimentos precisam ser verificados antes de iniciar seu processo." },
+  { icon: "doc", title: "Documentação", text: "Saiba quais documentos e procedimentos precisam ser verificados para não ser barrado." },
   { icon: "wallet", title: "Planejamento financeiro", text: "Organize os gastos iniciais e as despesas mensais que devem entrar na sua conta." },
   { icon: "pin", title: "Escolha da cidade", text: "Compare fatores como moradia, infraestrutura, serviços e estilo de vida." },
   { icon: "shield", title: "Residência e obrigações", text: "Entenda as etapas gerais e saiba onde consultar os requisitos oficiais." },
