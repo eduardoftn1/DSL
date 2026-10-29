@@ -9,7 +9,7 @@ export const CONFIG = {
   price: 19.9, // único lugar onde o preço é definido
   currency: "BRL",
 
-  checkoutUrl: "", // PENDENTE: URL do checkout externo. Todos os botões de compra usam este valor.
+  checkoutUrl: "https://ambienteeonline.org.ua/c/a2c2efd0ff", // Checkout externo usado por todos os botões de compra.
   successUrl: "", // PENDENTE: configure no checkout o retorno para <seu-domínio>/#obrigado
   paymentMethods: [], // ex.: ["Pix", "Cartão"]. Só aparece se preenchido.
   supportContact: "henriquemorarnoparaguai@gmail.com",
