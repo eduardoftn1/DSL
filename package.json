@@ -1,0 +1,14 @@
+{
+  "name": "morar-no-paraguai",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page do guia Morar no Paraguai, em JavaScript puro, sem dependências.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/serve.mjs .",
+    "dev": "node scripts/serve.mjs .",
+    "preview": "node scripts/serve.mjs dist"
+  },
+  "engines": { "node": ">=18" }
+}
