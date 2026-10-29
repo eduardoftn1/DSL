@@ -13,7 +13,7 @@ const OFFER_ITEMS = [
 export function Offer() {
   const { buy } = useApp();
   return (
-    <section className="offer-sec" id="oferta" aria-labelledby="h-offer">
+    <section className="offer-sec theme-white" id="oferta" aria-labelledby="h-offer">
       <div className="wrap offer-grid">
         <div className="offer-copy">
           <h2 id="h-offer">Comece seu planejamento com mais clareza.</h2>
@@ -74,7 +74,7 @@ const FAQ = [
 
 export function Faq() {
   return (
-    <section className="section" aria-labelledby="h-faq">
+    <section className="section theme-blue" aria-labelledby="h-faq">
       <div className="wrap">
         <div className="section-head">
           <h2 id="h-faq">Perguntas frequentes</h2>

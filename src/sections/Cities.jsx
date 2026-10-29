@@ -43,7 +43,7 @@ function costText(id) {
 
 export default function Cities() {
   return (
-    <section className="section band-white" aria-labelledby="h-city">
+    <section className="section band-white theme-white" aria-labelledby="h-city">
       <div className="wrap">
         <div className="section-head">
           <h2 id="h-city">Qual cidade faz mais sentido para você?</h2>

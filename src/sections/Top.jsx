@@ -49,7 +49,7 @@ const CHIPS = [
 export function Hero() {
   const { buy } = useApp();
   return (
-    <section className="hero" id="hero" aria-labelledby="h-hero">
+    <section className="hero theme-red" id="hero" aria-labelledby="h-hero">
       <div className="wrap hero-grid">
         <div className="hero-copy">
           <h1 id="h-hero">Pensando em morar no Paraguai? Descubra o que você precisa saber antes de se mudar.</h1>

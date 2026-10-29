@@ -66,7 +66,7 @@ export default function Previews() {
   };
 
   return (
-    <section className="section" aria-labelledby="h-prev">
+    <section className="section theme-red" aria-labelledby="h-prev">
       <div className="wrap">
         <div className="section-head">
           <h2 id="h-prev">Veja como o material está organizado.</h2>

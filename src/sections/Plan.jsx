@@ -12,7 +12,7 @@ const STEPS = [
 
 export function Docs() {
   return (
-    <section className="section" aria-labelledby="h-docs">
+    <section className="section theme-blue" aria-labelledby="h-docs">
       <div className="wrap docs-grid">
         <div>
           <div className="section-head" style={{ marginBottom: 20 }}>
@@ -70,7 +70,7 @@ const CATEGORIES = [
 export function Finance() {
   const { goto } = useApp();
   return (
-    <section className="section band-white" aria-labelledby="h-fin">
+    <section className="section band-white theme-white" aria-labelledby="h-fin">
       <div className="wrap fin-grid">
         <div className="fin-copy">
           <h2 id="h-fin">Quanto dinheiro você precisa reservar para começar?</h2>
@@ -130,7 +130,7 @@ const ORGANIZED = [
 
 export function Compare() {
   return (
-    <section className="section" aria-labelledby="h-diff">
+    <section className="section theme-red" aria-labelledby="h-diff">
       <div className="wrap">
         <div className="section-head">
           <h2 id="h-diff">Por que usar um guia em vez de começar do zero?</h2>

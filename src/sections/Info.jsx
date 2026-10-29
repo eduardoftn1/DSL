@@ -13,7 +13,7 @@ const PROBLEMS = [
 
 export function Identification() {
   return (
-    <section className="section band-white" aria-labelledby="h-ident">
+    <section className="section band-white theme-white" aria-labelledby="h-ident">
       <div className="wrap">
         <div className="section-head">
           <h2 id="h-ident">Antes de fazer as malas, você precisa entender o que essa mudança exige.</h2>
@@ -87,7 +87,7 @@ function Video() {
 
 export function Expert() {
   return (
-    <section className="section" aria-labelledby="h-expert">
+    <section className="section theme-blue" aria-labelledby="h-expert">
       <div className="wrap expert-grid">
         <div className="expert-copy">
           <h2 id="h-expert">Informação organizada para você tomar uma decisão melhor.</h2>
@@ -162,7 +162,7 @@ const ITEMS = [
 
 export function Receive() {
   return (
-    <section className="section band-white" aria-labelledby="h-recv">
+    <section className="section band-white theme-white" aria-labelledby="h-recv">
       <div className="wrap">
         <div className="section-head">
           <h2 id="h-recv">Tudo organizado para você sair da pesquisa solta e partir para o planejamento.</h2>
