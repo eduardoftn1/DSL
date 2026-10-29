@@ -12,10 +12,10 @@ export const CONFIG = {
   checkoutUrl: "", // PENDENTE: URL do checkout externo. Todos os botões de compra usam este valor.
   successUrl: "", // PENDENTE: configure no checkout o retorno para <seu-domínio>/#obrigado
   paymentMethods: [], // ex.: ["Pix", "Cartão"]. Só aparece se preenchido.
-  supportContact: "", // PENDENTE: canal de suporte (e-mail, WhatsApp etc.)
+  supportContact: "henriquemorarnoparaguai@gmail.com",
 
   responsibleName: "Henrique",
-  offerOwner: "[NOME OU IDENTIFICAÇÃO DO RESPONSÁVEL PELA OFERTA]",
+  offerOwner: "Henrique",
 
   // Só marque true quando o item existir e estiver incluído no produto.
   deliverables: { guide: true, checklist: true, spreadsheet: true, sources: true },
