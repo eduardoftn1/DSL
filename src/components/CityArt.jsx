@@ -68,10 +68,29 @@ function Riverside() {
 }
 
 export default function CityArt({ kind }) {
+  const photo =
+    kind === "capital"
+      ? {
+          src: "https://www.civitatis.com/blog/wp-content/uploads/2025/07/shutterstock_465637628-1280x853.jpg",
+          alt: "Vista urbana de Assunção, Paraguai",
+        }
+      : kind === "border"
+        ? {
+            src: "https://www.viagensecaminhos.com/wp-content/uploads/2024/03/ponte-da-amizade-brasil-paraguai.jpg",
+            alt: "Ponte da Amizade entre Ciudad del Este e o Brasil",
+          }
+        : null;
+
   return (
     <div className="city-art">
-      <span className="badge-ill">ILUSTRAÇÃO</span>
-      {kind === "capital" ? <Capital /> : kind === "border" ? <Border /> : <Riverside />}
+      {photo ? (
+        <img src={photo.src} alt={photo.alt} loading="lazy" />
+      ) : (
+        <>
+          <span className="badge-ill">ILUSTRAÇÃO</span>
+          <Riverside />
+        </>
+      )}
     </div>
   );
 }
