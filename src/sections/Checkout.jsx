@@ -124,9 +124,8 @@ export default function Checkout() {
           <div>
             <h2 id="checkout-guarantee-title">SUA COMPRA TEM GARANTIA</h2>
             <p>
-              Você tem 7 dias após a compra para avaliar o guia. Se decidir que ele não é para você, poderá solicitar o reembolso dentro desse prazo, conforme as condições informadas na política de reembolso.
+              Você tem 30 dias após a compra para avaliar o guia. Se decidir que ele não é para você, poderá solicitar o reembolso dentro desse prazo, conforme as condições informadas na política de reembolso.
             </p>
-            <a href={CONFIG.legal.refund || "#checkout-guarantee"}>Consulte as condições de reembolso antes de finalizar.</a>
           </div>
         </section>
 
