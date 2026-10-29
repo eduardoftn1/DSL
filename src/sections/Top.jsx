@@ -54,10 +54,10 @@ export function Hero() {
       <div className="wrap hero-grid">
         <div className="hero-copy">
           <h1 id="h-hero">MORAR NO PARAGUAI: O SEGREDO QUE NINGUÉM TE CONTA!</h1>
+          <h2>O QUE VOCÊ VAI DESCOBRIR:</h2>
           <p className="lead">
             <strong>ANTES DE SAIR DO BRASIL, DESCUBRA COMO CHEGAR NO PARAGUAI GANHANDO MAIS DO QUE 90% DOS BRASILEIROS.</strong>
           </p>
-          <h2>O QUE VOCÊ VAI DESCOBRIR:</h2>
           <ul className="benefits">
             {BENEFITS.map((b) => (
               <li key={b.label}>
