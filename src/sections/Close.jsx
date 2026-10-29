@@ -65,7 +65,7 @@ const FAQ = [
     "O material resolve minha situação tributária no Brasil?",
     "Não substitui orientação individual. A residência fiscal e as obrigações tributárias dependem das circunstâncias de cada pessoa e devem ser verificadas com as fontes competentes ou um profissional qualificado.",
   ],
-  ["Como recebo o produto?", "Após a confirmação do pagamento, o acesso é disponibilizado pelo fluxo de entrega configurado na compra."],
+  ["Como recebo o produto?", "Logo após a confirmação do pagamento, você receberá por e-mail as instruções para acessar o guia e os materiais."],
   [
     "Existe política de reembolso?",
     "Consulte a política de compra e os direitos legais aplicáveis ao consumidor, incluindo o direito de arrependimento previsto na legislação brasileira.",
