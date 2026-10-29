@@ -75,7 +75,6 @@ export function Hero() {
 
         <div className="hero-art">
           <Cover />
-          <p className="caption">Capa ilustrativa do guia digital.</p>
         </div>
       </div>
     </section>
