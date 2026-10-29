@@ -132,13 +132,7 @@ const ITEMS = [
     text: "Conteúdo organizado para entender os principais aspectos envolvidos no planejamento de uma mudança para o Paraguai.",
     topics: GUIDE_TOPICS,
   },
-  {
-    key: "checklist",
-    icon: "list",
-    green: true,
-    title: "Checklist de preparação",
-    text: "Uma lista organizada de documentos, pesquisas e providências para acompanhar seu planejamento.",
-  },
+
   {
     key: "spreadsheet",
     icon: "sheet",
