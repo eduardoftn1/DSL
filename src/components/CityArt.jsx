@@ -79,7 +79,12 @@ export default function CityArt({ kind }) {
             src: "https://www.viagensecaminhos.com/wp-content/uploads/2024/03/ponte-da-amizade-brasil-paraguai.jpg",
             alt: "Ponte da Amizade entre Ciudad del Este e o Brasil",
           }
-        : null;
+        : kind === "river"
+          ? {
+              src: "https://blog.livareviagens.com.br/wp-content/uploads/2025/08/Encarnacion-4-1024x683.webp",
+              alt: "Vista de Encarnación, Paraguai",
+            }
+          : null;
 
   return (
     <div className="city-art">
