@@ -12,10 +12,18 @@ export default function Checkout() {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [document, setDocument] = useState("");
+  const [phone, setPhone] = useState("");
+  const [payment, setPayment] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     setMessage("");
+    setPayment(null);
+
+    const cleanDocument = document.replace(/\D/g, "");
+    const cleanPhone = phone.replace(/\D/g, "");
 
     if (name.trim().length < 2) {
       setMessage("Informe seu nome completo.");
@@ -25,10 +33,43 @@ export default function Checkout() {
       setMessage("Confira o endereço de e-mail informado.");
       return;
     }
+    if (![11, 14].includes(cleanDocument.length)) {
+      setMessage("Informe um CPF ou CNPJ válido.");
+      return;
+    }
+    if (![10, 11].includes(cleanPhone.length)) {
+      setMessage("Informe um telefone com DDD.");
+      return;
+    }
 
-    setMessage(
-      "A geração do Pix ainda não está disponível: falta conectar um provedor de pagamento. Nenhuma cobrança foi criada e seus dados não foram enviados."
-    );
+    setLoading(true);
+    try {
+      const response = await fetch("/api/create-transaction", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          document: cleanDocument,
+          phone: cleanPhone,
+        }),
+      });
+      const data = await response.json();
+
+      if (!response.ok || data.status !== "success") {
+        throw new Error(data.message || "Não foi possível gerar o Pix. Tente novamente.");
+      }
+
+      setPayment({
+        qrCode: data.qr_code,
+        qrImage: data.qr_code_base64,
+        expiresAt: data.expires_at,
+      });
+    } catch (error) {
+      setMessage(error.message || "Não foi possível gerar o Pix. Tente novamente.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -88,6 +129,31 @@ export default function Checkout() {
                 required
               />
             </label>
+            <label>
+              CPF ou CNPJ
+              <input
+                autoComplete="off"
+                inputMode="numeric"
+                name="document"
+                value={document}
+                onChange={(event) => setDocument(event.target.value)}
+                placeholder="Somente números"
+                required
+              />
+            </label>
+            <label>
+              Telefone com DDD
+              <input
+                autoComplete="tel"
+                inputMode="tel"
+                name="phone"
+                type="tel"
+                value={phone}
+                onChange={(event) => setPhone(event.target.value)}
+                placeholder="(11) 99999-9999"
+                required
+              />
+            </label>
           </section>
 
           <section className="checkout-card payment-card" aria-labelledby="checkout-payment">
@@ -102,19 +168,41 @@ export default function Checkout() {
             </p>
 
             <div className="pix-placeholder" aria-live="polite">
-              <strong>Pix ainda não gerado</strong>
-              <span>O QR Code e o código Pix serão exibidos aqui após a integração com um provedor de pagamento.</span>
-              <span className="payment-status">Status: Pix não gerado</span>
+              {payment ? (
+                <>
+                  <strong>Pix gerado — aguardando pagamento</strong>
+                  {payment.qrImage && (
+                    <img
+                      src={payment.qrImage}
+                      alt="QR Code Pix para pagamento"
+                      style={{ display: "block", width: "min(220px, 100%)", margin: "16px auto" }}
+                    />
+                  )}
+                  {payment.qrCode && (
+                    <>
+                      <span>Ou copie o código Pix:</span>
+                      <code style={{ display: "block", overflowWrap: "anywhere", userSelect: "all" }}>
+                        {payment.qrCode}
+                      </code>
+                    </>
+                  )}
+                  {payment.expiresAt && <span>Válido até: {payment.expiresAt}</span>}
+                  <span className="payment-status">Status: aguardando confirmação</span>
+                </>
+              ) : (
+                <>
+                  <strong>Seu QR Code Pix será exibido aqui</strong>
+                  <span>Preencha seus dados e gere o Pix para concluir o pedido.</span>
+                  <span className="payment-status">Status: aguardando geração</span>
+                </>
+              )}
             </div>
 
             <p className="checkout-microcopy">Falta pouco para concluir seu pedido.</p>
-            <button className="btn btn-block checkout-submit" type="submit">
-              GERAR PIX E FINALIZAR PEDIDO
+            <button className="btn btn-block checkout-submit" type="submit" disabled={loading}>
+              {loading ? "GERANDO PIX..." : "GERAR PIX E FINALIZAR PEDIDO"}
             </button>
             <p className="checkout-total-note">Total: {priceLabel} — pagamento único.</p>
-            <p className="checkout-pix-note">
-              A integração de pagamentos Pix ainda precisa ser configurada. Nenhum Pix ou confirmação simulada é exibido.
-            </p>
             {message && <p className="checkout-message" role="alert">{message}</p>}
           </section>
         </form>
