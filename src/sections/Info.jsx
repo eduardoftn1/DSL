@@ -5,7 +5,7 @@ import Icon from "../components/Icon";
 /* ---------- Identificação ---------- */
 const PROBLEMS = [
   { icon: "doc", title: "Documentação", text: "Saiba quais documentos e procedimentos precisam ser verificados para não ser barrado." },
-  { icon: "wallet", title: "Planejamento financeiro", text: "Organize os gastos iniciais e as despesas mensais que devem entrar na sua conta." },
+  { icon: "wallet", title: "Meu número pessoal", text: "Tenha acesso ao meu número para tirar dúvidas (Vitalício)" },
   { icon: "pin", title: "Escolha da cidade", text: "Compare fatores como moradia, infraestrutura, serviços e estilo de vida." },
   { icon: "shield", title: "Lista de empresas contratando com salário de +R$5k", text: "Listas enormes de empresas atualizadas." },
   { icon: "list", title: "Grupo VIP", text: "Acesso ao Grupo VIP com atualizações para o resto da vida!" },
