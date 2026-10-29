@@ -43,16 +43,14 @@ export default function Checkout() {
           <a className="checkout-back" href="#" aria-label="Voltar à página do produto">
             Morar no Paraguai
           </a>
-          <span className="checkout-label">Checkout seguro</span>
-          <p>Finalize seu pedido para receber seu guia digital.</p>
+
         </header>
 
         <section className="checkout-card order-card" aria-labelledby="checkout-order">
           <h1 id="checkout-order">Resumo do pedido</h1>
           <div className="order-product">
             <div>
-              <strong>Guia digital Morar no Paraguai</strong>
-              <p>Guia prático para organizar o planejamento da mudança, consultar documentação, comparar cidades e avaliar custos.</p>
+              <strong>Morar no Paraguai</strong>
               <span>Produto digital · sem frete · Quantidade: 1</span>
             </div>
             <strong className="order-price">{priceLabel}</strong>
