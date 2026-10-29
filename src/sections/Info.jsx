@@ -16,7 +16,7 @@ export function Identification() {
     <section className="section band-white theme-white" aria-labelledby="h-ident">
       <div className="wrap">
         <div className="section-head">
-          <h2 id="h-ident">Antes de fazer as malas, você precisa entender o que essa mudança exige.</h2>
+          <h2 id="h-ident">Antes de meter o pé do Brasil, você precisa saber DISSO!</h2>
 
         </div>
         <div className="cards-5">
