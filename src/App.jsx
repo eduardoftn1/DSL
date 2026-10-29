@@ -76,6 +76,30 @@ export default function App() {
     []
   );
 
+  // Revela as seções conforme entram na área visível durante a rolagem.
+  useEffect(() => {
+    if (thanks || prefersReducedMotion() || !("IntersectionObserver" in window)) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    document.querySelectorAll("main > section, footer.site-footer").forEach((section) => {
+      section.classList.add("scroll-reveal");
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, [thanks]);
+
   // PageView uma única vez.
   useEffect(() => {
     if (pageViewSent.current) return;

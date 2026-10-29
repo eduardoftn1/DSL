@@ -12,6 +12,9 @@
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth}
+.scroll-reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.scroll-reveal.is-visible{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scroll-reveal{opacity:1;transform:none;transition:none}}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 body.has-sticky{padding-bottom:84px}
 h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.02em;line-height:1.12;text-wrap:balance}
