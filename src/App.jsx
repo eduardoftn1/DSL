@@ -36,19 +36,19 @@ function useThanksRoute() {
 }
 
 function useCheckoutRoute() {
-  const [checkout, setCheckout] = useState(() => window.location.hash === "#checkout");
-
   useEffect(() => {
-    const onHash = () => setCheckout(window.location.hash === "#checkout");
-    window.addEventListener("hashchange", onHash);
-    return () => window.removeEventListener("hashchange", onHash);
+    const redirectToExternalCheckout = () => {
+      if (window.location.hash === "#checkout" && CONFIG.checkoutUrl) {
+        window.location.replace(CONFIG.checkoutUrl);
+      }
+    };
+
+    redirectToExternalCheckout();
+    window.addEventListener("hashchange", redirectToExternalCheckout);
+    return () => window.removeEventListener("hashchange", redirectToExternalCheckout);
   }, []);
 
-  useEffect(() => {
-    if (checkout) window.scrollTo(0, 0);
-  }, [checkout]);
-
-  return checkout;
+  return false;
 }
 
 export default function App() {
@@ -67,10 +67,10 @@ export default function App() {
     toastTimer.current = setTimeout(() => setToast(null), 5000);
   }, []);
 
-  /** Todos os CTAs de compra abrem o checkout próprio e preservam os parâmetros da página. */
+  /** CTAs de compra direcionam ao checkout externo configurado. */
   const buy = useCallback(
     (where) => ({
-      href: "#checkout",
+      href: CONFIG.checkoutUrl,
       "data-where": where,
     }),
     []
