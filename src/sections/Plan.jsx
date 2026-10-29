@@ -53,43 +53,12 @@ export function Finance() {
   const { goto } = useApp();
   return (
     <section className="section band-white theme-white" aria-labelledby="h-fin">
-      <div className="wrap fin-grid">
-        <div className="fin-copy">
-          <h2 id="h-fin">Quanto dinheiro você precisa reservar para começar?</h2>
-          <p>
-            O valor depende da cidade, da moradia, do estilo de vida, dos documentos necessários e da sua fonte de renda. Em
-            vez de confiar em um número genérico, organize sua própria estimativa.
-          </p>
-          <div>
-            <a className="btn" href="#oferta" onClick={goto("oferta")}>
-              Quero organizar meus custos
-            </a>
-          </div>
-        </div>
-        <div className="sheet" role="group" aria-label="Prévia ilustrativa da planilha de custos, sem valores">
-          <div className="sheet-top">
-            <span>Planilha de custos iniciais</span>
-            <small>Prévia ilustrativa</small>
-          </div>
-          <div className="sheet-row h">
-            <span>CATEGORIA</span>
-            <span>ESTIMATIVA</span>
-          </div>
-          {CATEGORIES.map((c) => (
-            <div className="sheet-row" key={c}>
-              <span>{c}</span>
-              <span className="blank" aria-hidden="true">
-                R$
-              </span>
-            </div>
-          ))}
-          <div className="sheet-row tot">
-            <span>Total estimado</span>
-            <span className="blank" aria-hidden="true">
-              R$
-            </span>
-          </div>
-          <div className="sheet-foot">Campos em branco: você preenche com os seus próprios dados.</div>
+      <div className="wrap fin-copy">
+        <h2 id="h-fin">Quanto dinheiro você precisa reservar para começar?</h2>
+        <div>
+          <a className="btn" href="#hero" onClick={goto("hero")}>
+            Quero organizar meus custos
+          </a>
         </div>
       </div>
     </section>
