@@ -36,7 +36,7 @@ const CHIPS = [
   { icon: "book", text: "Guia digital prático" },
   { icon: "list", text: "Checklist de planejamento" },
   { icon: "sheet", text: "Planilha de custos" },
-  { icon: "link", text: "Links para fontes oficiais" },
+  { icon: "link", text: "Grupo VIP" },
 ];
 
 export function Hero() {
