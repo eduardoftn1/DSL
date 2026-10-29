@@ -18,7 +18,6 @@ export function Docs() {
         <div>
           <div className="section-head" style={{ marginBottom: 20 }}>
             <h2 id="h-docs">Realize o sonho de todo brasileiro.</h2>
-            <p>Com planejamento, você pode buscar mais possibilidades e trabalhar pelos objetivos que deseja para sua vida.</p>
           </div>
         </div>
         <div>
