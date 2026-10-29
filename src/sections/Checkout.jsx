@@ -51,7 +51,7 @@ export default function Checkout() {
           <div className="order-product">
             <div>
               <strong>Morar no Paraguai</strong>
-              <span>Produto digital · sem frete · Quantidade: 1</span>
+              <span>Produto digital · Quantidade: 1</span>
             </div>
             <strong className="order-price">{priceLabel}</strong>
           </div>
